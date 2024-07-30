@@ -99,9 +99,9 @@ function checkRequirements() {
 
   if(process.platform !== 'win32') {
     // disabled because new homebrew doesn't allow custom builds
-    // required.push({'bin': 'convert', 'args': '--version', 'needs': ['fontconfig']});
+    // required.push({'bin': 'magick', 'args': '--version', 'needs': ['fontconfig']});
   } else {
-    required.push({'bin': 'convert', 'args': '--version', 'needs': []});
+    required.push({ 'bin': 'magick', 'args': '--version', 'needs': []});
   }
 
   return Promise.all(required.map(checkRequirement));

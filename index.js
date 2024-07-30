@@ -44,7 +44,7 @@ function gifify(streamOrFile, opts) {
   var gifsicleArgs = computeGifsicleArgs(opts);
 
   var ffmpeg = spawn('ffmpeg', ffmpegArgs);
-  var convert = spawn('convert', convertArgs);
+  var convert = spawn('magick', convertArgs);
   var gifsicle = spawn('gifsicle', gifsicleArgs);
 
   [ffmpeg, convert, gifsicle].forEach(function handleErrors(child) {
